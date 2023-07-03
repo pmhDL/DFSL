@@ -155,7 +155,7 @@ class Model(nn.Module):
             losslatent = self.mseloss(laten, sem)
             rec = self.Netd(laten)
             lossrec = self.mseloss(rec, datas)
-            loss = losslatent + lossrec
+            loss = losslatent + self.args.coef * lossrec
             optimizer1.zero_grad()
             loss.backward()
             optimizer1.step()

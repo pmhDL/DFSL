@@ -49,6 +49,7 @@ if __name__ == '__main__':
     parser.add_argument('--latentdim', type=int, default=512)
     parser.add_argument('--cls', type=str, default='kl', choices=['ED', 'cos', 'kl'])
     parser.add_argument('--param', type=float, default=0.5)
+    parser.add_argument('--coef', type=float, default=0.2)
     #
     # Set and print the parameters
     args = parser.parse_args()
